@@ -1,0 +1,526 @@
+body {
+    background-color: rgb(0, 0, 0);
+    height: 100vh; 
+    margin: 0; 
+}
+
+.Headernama {
+    padding: 20px;
+    color: white;
+}
+
+
+.navbar {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+}
+
+.navbar ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline; 
+    margin-left: 15px; 
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #f0f0f0; 
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline; 
+    color: rgb(52, 18, 218);
+}
+
+.frontend h1 {
+    font-size: 30px; 
+    font-weight: bold; 
+    color: #007BFF; 
+    text-align: left; 
+    margin-top: 5px; 
+    margin-left: 20px; 
+}
+
+
+.teks {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    color: white;
+    max-width: calc(100% - 40px); 
+    margin-left: 20px; 
+    margin-top: 5px; 
+    overflow: hidden; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3; 
+    line-clamp: 5; 
+    text-overflow: ellipsis; 
+}
+.teks.visible {
+    opacity: 1; /* Teks terlihat */
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+
+.profil {
+    background-color: rgb(59, 53, 244);
+    padding: 20px;
+    width: 250px;
+    height: auto; /* Mengubah height menjadi auto agar fleksibel */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    
+    margin: 20px auto;
+    text-align: center;
+    
+  
+    box-shadow: 0 4px 8px rgba(130, 143, 60, 0.1);
+}
+
+.profil h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.profil p {
+    margin: 10px 0;
+    color: white;
+}
+
+/* Style untuk foto profil */
+.profil-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+    border: 4px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profil-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Efek hover */
+.profil:hover {
+    background-color: #b5b3b3;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.profil:hover .profil-image {
+    transform: scale(1.05);
+}
+
+.keahlian {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(59, 53, 244);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.keahlian h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.keahlian ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.keahlian li {
+    padding: 5px 0;
+    color: #000000;
+}
+
+.keahlian {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgb(59, 53, 244);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.keahlian h3 {
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.skill-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateX(10px);
+    background-color: #f0f0f0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #363636;
+}
+
+.skill-percentage {
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(45deg, rgb(0, 0, 0), blue);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+
+@keyframes progressAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.progress {
+    animation: progressAnimation 1.5s ease-out;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f8f9fa;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Warna khusus untuk masing-masing platform */
+.social-link .fa-instagram:hover {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.2);
+}
+
+.social-link .fa-facebook:hover {
+    color: #1877f2;
+    transform: scale(1.2);
+}
+
+.social-link .fa-github:hover {
+    color: #333;
+    transform: scale(1.2);
+}
+
+/* Efek hover untuk container */
+.social-link:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+/* Profile Page Styles */
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.profile-title h2 {
+    font-size: 1.5em;
+    color: rgb(59, 53, 244);
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgb(59, 53, 244);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 25px;
+}
+
+.experience-item h3 {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    background: rgb(59, 53, 244);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-stack {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.tech-stack span {
+    background: #000000;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skill-category li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(59, 53, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.gallery-item {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(215, 43, 43, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-content {
+    padding: 1rem;
+}
+
+.gallery-content h3 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.gallery-content p {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.feedback-section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
