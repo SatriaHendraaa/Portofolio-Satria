@@ -224,7 +224,7 @@ body {
     animation: progressAnimation 1.5s ease-out;
 }
 
-.social-icons {
+.icons {
     display: flex;
     justify-content: center;
     gap: 20px;
